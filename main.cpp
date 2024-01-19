@@ -3,6 +3,12 @@
 #include <forward_list>
 #include "hash.h"
 
+/*Integrantes:
+- Daniel Casquino Paz
+- Gabriel Blanco Gutierrez
+- Alexis Raza Estrada*/
+
+// Tests con el hashTable
 int main(){
     HashTable<string, int> hash(5);
     hash.insert("luis", 10);
