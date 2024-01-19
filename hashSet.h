@@ -21,7 +21,7 @@ private:
     int a;                       // Constante arbitraria para cada hashSet
     int upper, lower;            // Limites para el size al momento de hacer resize al insertar
     mutable std::vector<std::forward_list<int>> buckets;
-    // Buckets, vectores en vez de forward lists para poder crear sets sin elementos
+    // Buckets, vector de linked lists en vez de array para poder crear sets sin elementos
 
     int Hash(int key, int m) const
     {
@@ -213,6 +213,17 @@ public:
         }
         return result;
     } // Devuelve la diferencia en un rvalue
+
+    // Iteradores bonitos (me estaba complicando demasiado)
+    auto begin()
+    {
+        return buckets.begin();
+    }
+
+    auto end()
+    {
+        return buckets.end();
+    }
 };
 
 // me duele la mano
