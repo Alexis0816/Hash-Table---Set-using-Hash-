@@ -59,7 +59,7 @@ public:
         }
     };
 
-    TV find(TK key){        
+    TV find(TK key){  //busca el valor asociado a la clave
         int index = _hash(key);
         auto it0 = array[index];
         auto it1 = begin(it0);
@@ -108,7 +108,7 @@ public:
         throw ("there is no an entry with the key you are searching for");
     };
 
-    int _size(){
+    int _size(){ // definimos la capacidad del array
         return capacity;
     }
 
@@ -135,7 +135,8 @@ private:
             return size/(capacity*maxColision);
         }
 
-    void resize(){
+    void resize(){ //duplica el tamaño del array y reinserta todos los elementos en el nuevo array
+
         int prev_capacity = capacity;
         capacity = capacity*2;
         Set_from_Seq* prev_array = array;
