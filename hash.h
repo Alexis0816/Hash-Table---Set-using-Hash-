@@ -5,6 +5,11 @@
 #include <functional>
 using namespace std;
 
+/*Integrantes:
+- Daniel Casquino Paz
+- Gabriel Blanco Gutierrez
+- Alexis Raza Estrada*/
+
 const int maxColision = 3;
 const float maxFillFactor = 0.5;
 
